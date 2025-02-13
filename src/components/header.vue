@@ -43,6 +43,12 @@
                                 <router-link class="text-gray-500 transition hover:text-gray-500/75" to="/blog">
                                     Blog</router-link>
                             </li>
+
+                            <li>
+                                <!-- <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a> -->
+                                <router-link class="text-gray-500 transition hover:text-gray-500/75" to="/customer">
+                                    Customer</router-link>
+                            </li>
                         </ul>
                     </nav>
 

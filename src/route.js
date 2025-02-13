@@ -5,6 +5,8 @@ import Project from '@/page/project/index.vue'
 import Blog from '@/page/blog.vue'
 import ProjectDetail from '@/page/project/project-detail.vue'
 import Collection from '@/components/collection.vue'
+import NotFound from '@/components/NotFound.vue'
+import Customer from '@/page/customer.vue'
 
 const routes = [
     {
@@ -26,7 +28,11 @@ const routes = [
     {
         path: '/blog',
         component: Blog
-    }
+    },
+    {
+        path: '/customer', component: Customer
+    },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ]
 
 const router = createRouter({

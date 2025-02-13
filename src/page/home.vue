@@ -1,6 +1,8 @@
 <template>
-    <HeroSection />
-    <Customer />
+    <section>
+        <HeroSection />
+        <Customer />
+    </section>
 </template>
 <script>
 import HeroSection from '@/components/hero-section.vue';

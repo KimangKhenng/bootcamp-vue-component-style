@@ -1,5 +1,6 @@
 <template>
     <blockquote class="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+        <slot name="top"></slot>
         <div class="flex items-center gap-4">
             <img alt=""
                 src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
@@ -36,6 +37,7 @@
         <p class="mt-4 text-gray-700">
             {{ text }}
         </p>
+        <slot name="bottom"></slot>
     </blockquote>
 </template>
 <script>

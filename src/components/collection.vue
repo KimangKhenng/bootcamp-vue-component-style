@@ -11,6 +11,7 @@ export default {
     components: { ProjectCard },
     data() {
         return {
+            // Return from API Request
             projects: [
                 { id: 'n2414-5894-535-df3', title: "How to master C++", date: "2015/12/31", keywords: ["C++", "Java"] },
                 { id: '1a2d4-513-df3', title: "Advanced Python", date: "2013/12/31", keywords: ["Javascript", "Java"] },
