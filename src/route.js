@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '@/page/home.vue'
-import Project from '@/page/project/index.vue'
-import Blog from '@/page/blog.vue'
-import ProjectDetail from '@/page/project/project-detail.vue'
+import Home from '@/pages/home.vue'
+import Project from '@/pages/project/index.vue'
+import Blog from '@/pages/blog.vue'
+import ProjectDetail from '@/pages/project/project-detail.vue'
 import Collection from '@/components/collection.vue'
 import NotFound from '@/components/NotFound.vue'
-import Customer from '@/page/customer.vue'
+import Customer from '@/pages/customer.vue'
 
 const routes = [
     {

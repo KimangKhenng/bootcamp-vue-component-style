@@ -4,9 +4,20 @@
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
                 <div>
                     <div class="max-w-lg md:max-w-none">
-                        <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl"
+                            :class="{ 'text-red-500': count == 5 }">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. {{ count }}
                         </h2>
+
+
+                        <button @click="increment"
+                            class="group inline-block rounded-sm bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:ring-3 focus:outline-hidden">
+                            <span
+                                class="block rounded-xs bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent">
+                                Increment
+                            </span>
+                        </button>
+
 
                         <p class="mt-4 text-gray-700">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur doloremque saepe
@@ -24,3 +35,15 @@
         </div>
     </section>
 </template>
+<script>
+import useCounterStore from '@/stores/counter.js'
+import { mapActions, mapState } from 'pinia';
+export default {
+    computed: {
+        ...mapState(useCounterStore, ['count'])
+    },
+    methods: {
+        ...mapActions(useCounterStore, ['increment'])
+    }
+}
+</script>
