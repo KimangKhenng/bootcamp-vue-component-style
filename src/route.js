@@ -8,6 +8,14 @@ import Collection from '@/components/collection.vue'
 import NotFound from '@/components/NotFound.vue'
 import Customer from '@/pages/customer.vue'
 
+// Importing the module (TypeScript types are removed in JavaScript)
+import { HSStaticMethods } from "preline/preline";
+
+// Declaring the global window property
+window.HSStaticMethods = HSStaticMethods;
+
+
+
 const routes = [
     {
         path: '/',
@@ -40,5 +48,13 @@ const router = createRouter({
     history: createWebHistory(),
     routes,
 })
+
+router.afterEach((to, from, failure) => {
+    if (!failure) {
+        setTimeout(() => {
+            window.HSStaticMethods.autoInit();
+        }, 100)
+    }
+});
 
 export default router

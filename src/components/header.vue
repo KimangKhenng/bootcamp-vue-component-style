@@ -61,10 +61,11 @@
                             </a>
 
                             <div class="hidden sm:flex">
-                                <a class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-                                    href="#">
+                                <button class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                                    aria-haspopup="dialog" aria-expanded="false" aria-controls="register-modal"
+                                    type="button" data-hs-overlay="#register-modal">
                                     Register
-                                </a>
+                                </button>
                             </div>
                         </div>
 
