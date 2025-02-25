@@ -69,7 +69,7 @@ export default {
         return {
             navs: [{
                 name: "projects",
-                path: "/projects"
+                path: "/project"
             },
             {
                 name: "blog",
